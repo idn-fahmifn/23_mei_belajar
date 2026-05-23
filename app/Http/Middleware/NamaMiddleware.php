@@ -24,7 +24,7 @@ class NamaMiddleware
             return $next($request); // perintah untuk mengizinkan akses ke halaman yang akan dituju.
         }
 
-        Route::redirect()->route('route-belajar');
+        return redirect()->route('route-belajar');
 
     }
 }
