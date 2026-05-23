@@ -8,5 +8,16 @@
 </head>
 <body>
     <a href="{{ route('route-belajar') }}">Menuju Respon Belajar</a>
+
+    <form action="{{ route('kirim-data') }}" method="post">
+        <div class="">
+            <label for="nama">Nama Kamu</label>
+            <input type="text" name="nama" class="" required>
+        </div>
+        <div class="">
+            <button type="submit">Masuk</button>
+        </div>
+    </form>
+
 </body>
 </html>

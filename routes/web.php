@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\BelajarController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,3 +28,5 @@ Route::get('/study', function () {
 Route::get('/study/{parameter}', function() {
     return 'Hallo saya sedang belajar';
 });
+
+Route::post('/kirim', [BelajarController::class, 'proses'])->name('kirim-data');
