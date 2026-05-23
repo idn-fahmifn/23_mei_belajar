@@ -19,7 +19,7 @@ Route::get('/belajar', function () {
 
 Route::get('/study', function () {
     return view('belajar'); //menampilkan sebuah halaman bernama belajar.blade.php
-});
+})->middleware('nama');
 
 
 // membuat sebuah route yang memiliki parameter

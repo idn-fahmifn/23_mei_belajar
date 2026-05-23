@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Foundation\Application;
-use Illuminate\Foundation\Configuration\Exceptions;
-use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Foundation\Configuration\{Exceptions, Middleware};
+
+use App\Http\Middleware\NamaMiddleware; //jangan lupa import nama middlewarenya.
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -11,7 +12,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        // berikan sebuah kunci, agar manggil middlewarenya ga terlalu panjang.
+
+        $middleware->alias([
+            'nama' => NamaMiddleware::class
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
