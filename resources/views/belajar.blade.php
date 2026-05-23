@@ -10,6 +10,7 @@
     <a href="{{ route('route-belajar') }}">Menuju Respon Belajar</a>
 
     <form action="{{ route('kirim-data') }}" method="post">
+        @csrf
         <div class="">
             <label for="nama">Nama Kamu</label>
             <input type="text" name="nama" class="" required>
