@@ -16,9 +16,11 @@ Route::get('/belajar', function () {
     return 'Hallo saya sedang belajar Laravel';
 })->name('route-belajar');
 
+
 Route::get('/study', function () {
-    return view('belajar');
+    return view('belajar'); //menampilkan sebuah halaman bernama belajar.blade.php
 });
+
 
 // membuat sebuah route yang memiliki parameter
 Route::get('/study/{parameter}', function() {

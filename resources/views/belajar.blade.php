@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="/belajar">Menuju Respon Belajar</a>
+    <a href="{{ route('route-belajar') }}">Menuju Respon Belajar</a>
 </body>
 </html>
