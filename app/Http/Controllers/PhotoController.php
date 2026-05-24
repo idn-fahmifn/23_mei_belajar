@@ -11,7 +11,45 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        //
+        $nama = "Fahmi Nuradi";
+
+        // menampilkan object
+        $daftarMobil = [
+            (object) [
+                'id' => 1,
+                'merk' => 'Toyota',
+                'model' => 'Avanza',
+                'jenis' => 'MPV',
+                'tahun' => 2022,
+                'harga_sewa' => 350000,
+            ],
+            (object) [
+                'id' => 2,
+                'merk' => 'Honda',
+                'model' => 'Civic Turbo',
+                'jenis' => 'Sedan',
+                'tahun' => 2023,
+                'harga_sewa' => 800000,
+            ],
+            (object) [
+                'id' => 3,
+                'merk' => 'Mitsubishi',
+                'model' => 'Pajero Sport',
+                'jenis' => 'SUV',
+                'tahun' => 2021,
+                'harga_sewa' => 900000,
+            ],
+            (object) [
+                'id' => 4,
+                'merk' => 'Wuling',
+                'model' => 'Air EV',
+                'jenis' => 'Electric Vehicle',
+                'tahun' => 2023,
+                'harga_sewa' => 500000,
+            ],
+        ];
+
+        return view('photos.index', compact('nama'));
     }
 
     /**
@@ -19,7 +57,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        //
+        return view('photos.create');
     }
 
     /**

@@ -45,6 +45,7 @@ class BelajarController extends Controller
                 'harga_sewa' => 500000,
             ],
         ];
+        
 
         return response()->json([
             'status' => 'success',

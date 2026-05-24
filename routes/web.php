@@ -36,4 +36,6 @@ Route::get('/barang/{param}', [BelajarController::class, 'detail'])->name('baran
 // resource tidak perlu diberikan name pada routenya.
 Route::resource('/photos', PhotoController::class);
 
+Route::view('tampilan', 'photos.template');
+
 
