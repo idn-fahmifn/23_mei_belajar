@@ -49,7 +49,7 @@ class PhotoController extends Controller
             ],
         ];
 
-        return view('photos.index', compact('nama'));
+        return view('photos.index', compact('nama', 'daftarMobil'));
     }
 
     /**
