@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\BelajarController;
+use App\Http\Controllers\{BelajarController, PhotoController};
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,3 +30,10 @@ Route::get('/study/{parameter}', function() {
 });
 
 Route::post('/kirim', [BelajarController::class, 'proses'])->name('kirim-data');
+Route::get('/barang', [BelajarController::class, 'barang'])->name('barang');
+Route::get('/barang/{param}', [BelajarController::class, 'detail'])->name('barang-detail');
+
+// resource tidak perlu diberikan name pada routenya.
+Route::resource('/photos', PhotoController::class);
+
+
