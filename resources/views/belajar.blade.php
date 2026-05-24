@@ -11,10 +11,25 @@
 
     <form action="{{ route('kirim-data') }}" method="post">
         @csrf
+
         <div class="">
             <label for="nama">Nama Kamu</label>
-            <input type="text" name="nama" class="" required>
+            <input type="text" name="nama" value="{{ old('nama') }}" class="" required>
+            {{-- menampilkan pesan error --}}
+            @error('nama')
+                <span>{{$message}}</span>
+            @enderror
         </div>
+
+        <div class="">
+            <label for="umur">Umur Kamu</label>
+            <input type="number" name="umur" value="{{ old('umur') }}" class="" required>
+             {{-- menampilkan pesan error --}}
+            @error('umur')
+                <span>{{$message}}</span>
+            @enderror
+        </div>
+
         <div class="">
             <button type="submit">Masuk</button>
         </div>
