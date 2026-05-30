@@ -40,6 +40,7 @@ Route::view('tampilan', 'photos.template');
 
 // index untuk mobil
 Route::get('/mobil', [CarController::class, 'index'])->name('car.index');
+Route::get('/mobil/{parameter}', [CarController::class, 'show'])->name('car.show');
 
 
 

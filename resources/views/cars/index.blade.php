@@ -22,15 +22,22 @@
             </thead>
             <tbody>
                 @forelse ($cars as $car)
-                    <td> {{ $car->brand }} </td>
-                    <td> {{ $car->type }} </td>
-                    <td> {{ $car->stock }} </td>
-                    <td>
-                        <a href="#" class="btn btn-small btn-info">Detail</a>
-                    </td>
+                    <tr>
+                        <td> {{ $car->brand }} </td>
+                        <td> {{ $car->type }} </td>
+                        <td> {{ $car->stock }} </td>
+                        <td>
+                            <a href="{{ route('car.show', $car->id) }}" class="btn btn-sm btn-info">Detail</a>
+                        </td>
+                    </tr>
                 @empty
                 @endforelse
             </tbody>
         </table>
+
+        <div class="my-2">
+            {{ $cars }}
+        </div>
+
     </div>
 @endsection
