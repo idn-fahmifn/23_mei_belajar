@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\{BelajarController, PhotoController};
+use App\Http\Controllers\{BelajarController, CarController, PhotoController};
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,5 +37,11 @@ Route::get('/barang/{param}', [BelajarController::class, 'detail'])->name('baran
 Route::resource('/photos', PhotoController::class);
 
 Route::view('tampilan', 'photos.template');
+
+// index untuk mobil
+Route::get('/mobil', [CarController::class, 'index'])->name('car.index');
+
+
+
 
 
