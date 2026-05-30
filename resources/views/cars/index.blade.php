@@ -31,6 +31,11 @@
                         </td>
                     </tr>
                 @empty
+                <tr>
+                    <td colspan="4" class="py-4 text-center">
+                        Data tidak ditemukan
+                    </td>
+                </tr>
                 @endforelse
             </tbody>
         </table>
